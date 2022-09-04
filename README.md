@@ -14,7 +14,7 @@ oooooooooooooooooooo~~~~.88~oooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 Бот содержит 1050 уникальных фраз. Подключается через Telegram [@neyrotemnov_bot](https://t.me/neyrotemnov_bot). 
 
-Бота так же можно добавить в групповой чат как обычного пользователя. В таком случае он будет реагировать на упоминание его в разговоре по имени <strong>Нейротемнов</strong>, <strong>@НейроТемнов</strong>, <strong>@neyrotemnov_bot</strong>, <strong>нейро темнов</strong>, а так же на слово - <strong>Крым</strong>.
+Бота так же можно добавить в групповой чат как обычного пользователя. В таком случае он будет реагировать на упоминание его в разговоре по имени <strong>Нейротемнов</strong>, <strong>@НейроТемнов</strong>, <strong>@neyrotemnov_bot</strong>, <strong>нейро темнов</strong>, а так же на слово - <strong>Крым</strong>. Если выявит буквы 'і', 'ї', 'є' в сообщениях, будет агриться на украинский язык.
 
 <img src="https://raw.githubusercontent.com/Richex/neyroorlov/main/img/1.jpg" />
 
