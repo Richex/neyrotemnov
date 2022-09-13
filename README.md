@@ -2137,3 +2137,10 @@ state that Ukraine is a poor country, YOURE A FAKEN FASHISD!!!!!!!!!!!!
 [![BG](https://i.imgur.com/Hlz7Cba.jpg)](https://www.youtube.com/watch?v=_WxRbxK2ClA)
 
 </details>
+
+<details>
+<summary><b>Как установить на сервер Ubuntu</b></summary>
+
+[![BG](https://i.imgur.com/8HLgmhl.jpg)](https://www.youtube.com/watch?v=HOJsalRLnEQ)
+
+</details>
