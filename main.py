@@ -1070,7 +1070,7 @@ common_text = ['))',
                '☝️ долбоеб из альтернативной реальности',
                '☝️ чей твинк опять обосрался?']
 
-uncommon_text = ['Вы меня триггерить пытаетесь, но я вас раскусил.',
+angry_text = ['Вы меня триггерить пытаетесь, но я вас раскусил.',
                  'Сначала украинские подарили пыне Крым, а теперь рвутся с того, что обычные люди туда ездят не через 3 пизды, а нормальным образом.',
                  'А мнение крымчан учитывается?',
                  'В Крыму за свободу кто-то боролся?',
@@ -1115,7 +1115,7 @@ ukrainian_lang_response = ['По-русски говори на этом сай�
                            'Чому українською балакаєш?']
 
 # триггеры для активации бота
-triggers = ['нейротемнов', '@нейротемнов', '@neyrotemnov_bot', 'нейро темнов']
+trigger_words = ['нейротемнов', '@нейротемнов', '@neyrotemnov_bot', 'нейро темнов']
 triggers_angery = ['крым', 'жалко', 'рвись', 'порвался']
 triggers_ukr = ['і', 'Ї', 'є']
 
@@ -1133,18 +1133,22 @@ def handle_message(message):
 
     elif message.chat.type == "group" or message.chat.type == "supergroup" or message.chat.type == "channel":
         # проверка упоминания имени бота и отправка случайного ответа из массива common_text
-        for trigger in triggers:
+        for trigger in trigger_words:
             if trigger in message.text.lower():
                 bot.send_message(message.chat.id, random.choice(common_text))
 
-        # проверка на ключевое слово "жаль" и отправка случайного ответа из массива uncommon_text
+        # проверка на ключевое слово "жаль" и отправка случайного ответа из массива uncommon_text c некоторой вероятностью (~25%)
         for angry in triggers_angery:
-            if angry in message.text.lower():
-                bot.send_message(message.chat.id, random.choice(uncommon_text))
+            chance = random.randint(14,36)
+            trigger_chance = random.randint(0,100)
+            if angry in message.text.lower() and trigger_chance <= chance:
+                bot.send_message(message.chat.id, random.choice(angry_text))
 
         # проверка на украинский язык и отправка из массива  ukrainian_lang_response
         for ukr in triggers_ukr:
-            if ukr in message.text.lower():
+            chance = random.randint(30, 40)
+            trigger_chance = random.randint(0, 100)
+            if ukr in message.text.lower() and trigger_chance <= chance:
                 bot.send_message(message.chat.id, random.choice(ukrainian_lang_response))
 
 
